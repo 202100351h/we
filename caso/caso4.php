@@ -125,7 +125,7 @@
         </form>
     </section>
     <footer>
-        <h6>Todos los derechos reservados @Eduardo</h6>
+
     </footer>
 </body>
 
