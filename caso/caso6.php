@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+
+    </header>
+
+    <section>
+        
+    </section>
     
 </body>
 </html>
