@@ -11,7 +11,7 @@
 <body>
     <header>
         <h3>PAGO DE SALARIO DE EMPLEADOS</h3>
-        <img src="../img/empleados.jpg" width="600" height="150">
+        <img src="../img/empleados.jfif" width="600" height="150">
     </header>
     <section>
         <form action="caso4.php" method="post">
