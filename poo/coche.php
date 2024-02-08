@@ -1,5 +1,4 @@
 <?php
-
 class Coche {
     public $color;
     public $potencia;
@@ -15,40 +14,38 @@ class Coche {
 
     public function acelerar($litros) {
         if ($this->combustible == "gasolina" && $this->deposito < 10) {
-            return 0;
+            return $this->velocidad;
         } else {
             if ($this->combustible == "gasolina") {
                 $this->deposito += $litros;
                 return $this->velocidad += 10;
             } else {
-                return 0;
+                return $this->velocidad;
             }
         }
     }
 
     public function repostar($tipoCombustible, $litros) {
         if ($this->combustible == $tipoCombustible) {
-            $this->deposito += $litros;
-            return $this->deposito;
+            return $this->deposito += $litros;
         } else {
-            return 0;
+            return $this->deposito;
         }
     }
-    
 
     public function estado() {
         if ($this->velocidad > 0) {
             return "Moviéndose";
         } else {
-            return "Reposo";
+            return "En reposo";
         }
     }
 }
 
 $miCoche = new Coche('Gasoil');
-echo "<br> Velocidad después de acelerar con el depósito vacío: " . $miCoche->acelerar(50). "\n";
-echo "<br> Combustible después de repostar con el combustible equivocado:  " . $miCoche->repostar("Gasolina", 40)."\n";
-echo "<br> Combustible después de echar 40 litros de gasóleo: " . $miCoche->repostar("Gasoil", 40) . "\n";
-echo "<br> Velocidad después de acelerar con combustible en el depósito: ". $miCoche->acelerar(10). "\n";
-echo "<br> Estado del coche: ". $miCoche->estado();
+echo "Velocidad después de acelerar con el depósito vacío: " . $miCoche->acelerar(10). "<br>";
+echo "Combustible después de repostar con el combustible equivocado:  " . $miCoche->repostar("Gasolina", 40)."<br>";
+echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche->repostar("Gasoil", 40) . "<br>";
+echo "Velocidad después de acelerar con combustible en el depósito: ". $miCoche->acelerar(10). "<br>";
+echo "Estado del coche: ". $miCoche->estado()."<br>";
 ?>
