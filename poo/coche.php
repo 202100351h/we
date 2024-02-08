@@ -28,11 +28,13 @@ class Coche {
 
     public function repostar($tipoCombustible, $litros) {
         if ($this->combustible == $tipoCombustible) {
-            return $this->deposito += $litros;
+            $this->deposito += $litros;
+            return $this->deposito;
         } else {
             return 0;
         }
     }
+    
 
     public function estado() {
         if ($this->velocidad > 0) {
